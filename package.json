@@ -1,0 +1,24 @@
+{
+  "name": "convue-cli",
+  "version": "1.0.6",
+  "description": "cli template for convue",
+  "author": "ziping <ziping@xencapital.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ziping-li/convue-cli.git"
+  },
+  "main": "index.js",
+  "files": [
+    "template",
+    "createProject.js"
+  ],
+  "bin": {
+    "convue": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "inquirer": "^7.3.3",
+    "shelljs": "^0.8.4"
+  }
+}

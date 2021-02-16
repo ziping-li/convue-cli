@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><!-- TITLE --></title>
+    <!-- HEAD -->
+  </head>
+  <body>
+    <!-- APP -->
+    <script type="module">
+      import { createApp } from 'vue';
+      import App from './src/App';
+      import router from 'pages-generated';
+      import globalComponent from 'components-generated';
+      import store from 'store-generated';
+      import plugin from 'plugin-generated';
+      import i18n from 'locale-generated';
+
+      const app = createApp(App);
+      window.__APP__ = app;
+
+      app.use(router);
+      app.use(globalComponent);
+      app.use(store);
+      app.use(plugin);
+      app.use(i18n);
+      app.mount('#app');
+    </script>
+  </body>
+</html>
