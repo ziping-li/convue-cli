@@ -11,20 +11,11 @@
     <script type="module">
       import { createApp } from 'vue';
       import App from './src/App.vue';
-      import router from 'pages-generated';
-      import globalComponent from 'components-generated';
-      import store from 'store-generated';
-      import plugin from 'plugin-generated';
-      import i18n from 'locale-generated';
+      import convue from 'convue-package';
 
       const app = createApp(App);
-      window.__APP__ = app;
 
-      app.use(router);
-      app.use(globalComponent);
-      app.use(store);
-      app.use(plugin);
-      app.use(i18n);
+      app.use(convue);
       app.mount('#app');
     </script>
   </body>
