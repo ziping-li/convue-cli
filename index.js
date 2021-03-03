@@ -6,12 +6,6 @@ const createProject = require('./createProject');
 
 const promptList = [
   {
-    type: 'input',
-    message: 'Please enter the project name',
-    name: 'name',
-    default: 'my-app',
-  },
-  {
     type: 'list',
     message: 'Please select the project type',
     name: 'type',
@@ -20,5 +14,5 @@ const promptList = [
 ];
 
 inquirer.prompt(promptList).then((answers) => {
-  createProject(answers.name, answers.type);
+  createProject(answers.type);
 });
